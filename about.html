@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style/nav-sidebar.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <!-- Wrapper-->
+    <div class="wrapper">
+        <!----------------------------- Sidebar  ---------------------------->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                 <!-- <h3>Bootstrap Sidebar</h3> -->
+                 <img src="img/logo.png" alt="" style="width: 100px;">
+            </div>
+
+            <ul class="list-unstyled components">
+                <!-- <p>Dummy Heading</p> -->
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Các thuật toán sắp xếp</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="index.html">Bubble Sort</a>
+                        </li>
+                       
+                        <li>
+                            <a href="insertion.html">Insertion Sort</a>
+                        </li>
+                        <li>
+                            <a href="interchange.html">Interchange Sort</a>
+                        </li>
+                        <li>
+                            <a href="selection.html">Selection Sort</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="guide.html">Hướng dẫn</a>
+                </li>
+                <!-- <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <!-- <li>
+                    <a href="#">Portfolio</a>
+                </li> -->
+                <li>
+                    <a href="#">Liên hệ</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <!-- <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li> -->
+            </ul>
+        </nav>
+        <!----------------------------- END Sidebar  ---------------------------->
+
+        <!-----------------------Page Content  ------------------------------->
+        <div id="content">
+
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <h6>Giới thiệu</h6>
+                    <h6></h6>
+                    <!-- <ul class="nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+
+                    </ul> -->
+
+                </div>
+
+            </nav> <!-- End navbarr-->
+
+            <!-- Layout -->
+            <div class="container " id="box-container">
+                <h3>Đây là một sản phẩm của các giảng viên trường Cao đẳng Đắk Lắk</h3>
+                <br>
+                <p>
+                    Các nội dung liên quan đến thuật toán sắp xếp trong lập trình là các nội dung có độ khó cao. 
+                    Vì vậy việc xây dựng một công cụ giúp người học có thể tiếp cận các kiến thức về các thuật toán sắp xếp một cách trực quan là cần thiết.
+                </p>
+                <p>
+                    Việc cung cấp một công cụ trực quan trên nền Web có thể đem lại nhiều ưu điểm: Dễ tiếp cận;
+                    Linh hoạt trong tiếp nhận ý kiến phản hồi, bảo trì, sửa chữa, nâng cấp; Có thể được sử dụng như một công cụ để quảng bá Nhà trường.
+                </p>
+                <p>
+                    Với đề tài này, nhóm nghiên cứu đưa ra mục tiêu: 
+                    Nghiên cứu, cập nhật các kiến thức mới trong các phiên bản Javacript mới nhất; 
+                    Xây dựng công cụ mô phỏng các thuật toán sắp xếp. 
+                    Với sản phẩm của đề tài, nhóm nghiên cứu mong muốn có thể cung cấp một công cụ trực quan hiệu quả phục vụ cho công tác giảng dạy, 
+                    học tập cho các giáo viên và học sinh trên khắp cả nước. Thông qua công cụ cũng giúp quảng bá hình ảnh, nâng cao uy tín của Nhà trường, góp phần nâng cao hiệu quả của công tác tuyển sinh.
+                </p>
+                
+            </div>
+            <footer class="text-center">
+                <div>Sản phẩm của tập thể giảng viên khoa CNTT - KẾ TOÁN</div>
+                <div>Trường CAO ĐẲNG ĐẮK LẮK</div>
+                <div>Địa chỉ: 594 Lê Duẩn, Tp. Buôn Ma Thuột, Đắk Lắk</div>
+            </footer>
+            <!-- End layout -->
+
+
+        </div>
+        <!-----------------------END Page Content  ------------------------------->
+    </div><!-- End Wrapper-->
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="js/array.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                  // Khởi tạo CustomArray và chạy mô phỏng Bubble Sort
+                
+            });
+            $('#rbt_c').on('click', function () {
+                $(".img_source").attr("src","img/bubblesort/c.png");
+            });
+            $('#rbt_csharp').on('click', function () {
+                $(".img_source").attr("src","img/bubblesort/csharp.png");
+            });
+            $('#rbt_js').on('click', function () {
+                $(".img_source").attr("src","img/bubblesort/js.png");
+            });
+
+
+            const values = [5, 3, 1, 4, 2];
+            const animationContainer = $('#animation_container');
+            const customArray = new CustomArray(animationContainer, values);
+            bubbleSort(customArray);
+        });
+    </script>
+</body>
+
+</html>

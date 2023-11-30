@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style/nav-sidebar.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <!-- Wrapper-->
+    <div class="wrapper">
+        <!----------------------------- Sidebar  ---------------------------->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                 <!-- <h3>Bootstrap Sidebar</h3> -->
+                 <img src="img/logo.png" alt="" style="width: 100px;">
+            </div>
+
+            <ul class="list-unstyled components">
+                <!-- <p>Dummy Heading</p> -->
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Các thuật toán sắp xếp</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="index.html">Bubble Sort</a>
+                        </li>
+                       
+                        <li>
+                            <a href="insertion.html">Insertion Sort</a>
+                        </li>
+                        <li>
+                            <a href="interchange.html">Interchange Sort</a>
+                        </li>
+                        <li>
+                            <a href="selection.html">Selection Sort</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="guide.html">Hướng dẫn</a>
+                </li>
+                <!-- <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <!-- <li>
+                    <a href="#">Portfolio</a>
+                </li> -->
+                <li>
+                    <a href="#">Liên hệ</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <!-- <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li> -->
+            </ul>
+        </nav>
+        <!----------------------------- END Sidebar  ---------------------------->
+
+        <!-----------------------Page Content  ------------------------------->
+        <div id="content">
+
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <h6>Giới thiệu</h6>
+                    <h6></h6>
+                    <!-- <ul class="nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Page</a>
+                        </li>
+
+                    </ul> -->
+
+                </div>
+
+            </nav> <!-- End navbarr-->
+
+            <!-- Layout -->
+            <div class="container " id="box-container">
+                <h4>1. C&aacute;c chức năng tr&ecirc;n thanh điều hướng</h4>
+                <img src="img/guide/menu.png" alt="">
+                <br/>
+                <br/>
+                <br/>
+                <h4>2. C&aacute;c th&agrave;nh phần tr&ecirc;n m&agrave;n h&igrave;nh l&agrave;m việc của chức năng m&ocirc; phỏng</h4>
+                <img src="img/guide/content.png" alt="">
+                <h4>3. Hướng dẫn chạy m&ocirc; phỏng thuật to&aacute;n</h4>
+                <h6>Bước 1: Khởi tạo mảng cần sắp xếp</h6>
+                <p>C&oacute; 2 c&aacute;ch khởi tạo</p>
+                <ul>
+                <li>Khởi tạo mảng với c&aacute;c phần tử c&oacute; gi&aacute; trị ngẫu nhi&ecirc;n</li>
+                <li>Khởi tạo mảng từ một chuỗi chứa th&ocirc;ng tin c&aacute;c phần tử. C&aacute;c phần tử c&oacute; thể c&aacute;ch nhau bởi khoảng trắng, dấu chấm phẩy, dấu phẩy, dấu hai chấm.</li>
+                </ul>
+                <p>Sau khi lựa chọn xong, click v&agrave;o n&uacute;t GO để mảng được khởi tạo</p>
+                <h6>Bước 2: Chạy minh hoạ</h6>
+                <p>C&oacute; c&aacute;c button lựa chọn l&agrave; Play : chạy m&ocirc; phỏng, Pause : tạm dừng, Next : chạy đến bước kế tiếp. button Next chỉ c&oacute; t&aacute;c dụng khi c&ocirc;ng cụ đang ở trạng th&aacute;i tạm dừng.</p>
+                
+            </div>
+            <footer class="text-center">
+                <div>Sản phẩm của tập thể giảng viên khoa CNTT - KẾ TOÁN</div>
+                <div>Trường CAO ĐẲNG ĐẮK LẮK</div>
+                <div>Địa chỉ: 594 Lê Duẩn, Tp. Buôn Ma Thuột, Đắk Lắk</div>
+            </footer>
+            <!-- End layout -->
+
+
+        </div>
+        <!-----------------------END Page Content  ------------------------------->
+    </div><!-- End Wrapper-->
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="js/array.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                  // Khởi tạo CustomArray và chạy mô phỏng Bubble Sort
+                
+            });
+            $('#rbt_c').on('click', function () {
+                $(".img_source").attr("src","img/bubblesort/c.png");
+            });
+            $('#rbt_csharp').on('click', function () {
+                $(".img_source").attr("src","img/bubblesort/csharp.png");
+            });
+            $('#rbt_js').on('click', function () {
+                $(".img_source").attr("src","img/bubblesort/js.png");
+            });
+
+
+            const values = [5, 3, 1, 4, 2];
+            const animationContainer = $('#animation_container');
+            const customArray = new CustomArray(animationContainer, values);
+            bubbleSort(customArray);
+        });
+    </script>
+</body>
+
+</html>

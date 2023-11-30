@@ -1,0 +1,23 @@
+
+#animation_container {
+    position: relative;
+    width: 360px; /* Độ rộng của animation_container */
+    height: 50px; /* Chiều cao tối thiểu */
+    border: 1px solid #000;
+    margin: 20px auto;
+}
+
+.array-item {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #3498db;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+select {
+    margin-top: 20px;
+}

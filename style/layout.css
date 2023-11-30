@@ -1,0 +1,119 @@
+/* Box Styles */
+.custom-box {
+  border: 1px solid #c12424;
+  height: 300px;
+  padding: 5px;
+}
+.box-content {
+  border: 1px solid #ccc;
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+}
+
+.container {
+  /* border: 1px solid #ccc; */
+  padding: 0px;
+  /* height: calc(100% - 130px);  */
+}
+.row{
+  border: 1px solid #6728e5;
+  max-width: 900px;
+  
+}
+
+body > * {
+  font-size: 0.8em; 
+}
+
+input[type="text"]
+{
+    font-size:12px;
+}
+.pointer {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+}
+/** controls-container */
+#controls-container {
+  display: grid;
+  grid-template-rows: 60px auto 60px; /* Dòng 1 và 3 có độ cao cố định, dòng 2 co giãn */
+  /* width: 90%; */
+  height: 100%; /* Đảm bảo container có chiều cao 100% của parent */
+}
+
+.part {
+  text-align: center;
+  /* padding: 10px; */
+}
+
+.part-1, .part-3 {
+  background-color: #ccc;
+}
+
+.controls_row{
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  align-items: baseline;
+}
+.flex-center{
+  flex-direction: center;
+  align-items: center;
+}
+
+#btn_go {
+  position: absolute;
+  right: 10px;
+  height: 30px;
+  /* margin-right: 0px; */
+}
+.diagram{
+  max-height: 100%;
+  max-width: 100%;
+}
+.img_source{
+  max-height: 100%;
+  max-width: 100%;
+}
+/** end controls-container */
+.scrollable-div {
+  overflow: auto; /* Tạo thanh cuộn khi nội dung vượt quá kích thước */
+}
+/* css margin and padding */
+.mr-0{
+  margin-right: 0px;
+}
+.mr-1{
+  margin-right: 10px;
+}
+.mr-2{
+  margin-right: 20px;
+}
+.mr-3{
+  margin-right: 30px;
+}
+.mr-4{
+  margin-right: 40px;
+}
+.ml-0{
+  margin-left: 0px;
+}
+.ml-1{
+  margin-left: 10px;
+}
+.ml-2{
+  margin-left: 20px;
+}
+.ml-3{
+  margin-left: 30px;
+}
+.ml-4{
+  margin-left: 40px;
+}
+
+/* .mt-1{
+
+} */
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //các biến môi trường
+        var imgsrc = "hoamai.png", imgwidth = 15, imgheight = 15; //Các biến về bông hoa
+        var windowwidth, windowheight; //Biến về kích cỡ màn hình.
+        var scrollwidth, scrollheight; 
+        var speed = 10, hrzmove = 20; 
+        var numofflw = 20; //Số lượng bông hoa.
+        //Xuất các bông hoa.
+        for (var i = 0; i < numofflw; i++) {
+            document.write('<div style="position:absolute; z-index:9999;"id="DivFlw' + i + '"><img src="' + imgsrc + '"height="' + imgheight + '" width="' + imgwidth + '" alt="*" border="0"></div>');
+        }
+        
+        getScreenInfo();
+        //Lấy style của div chứa bông hoa thứ nhất
+        for (var i = 0; i < numofflw; i++) {
+            var DivFlwStyle = document.getElementById('DivFlw'+i).style;
+            //Gán vị trí mới bằng cách lấy ngẫu nhiên.
+            DivFlwStyle.top = getRandom(0, windowheight) + "px";
+            DivFlwStyle.left = getRandom(0, windowwidth) + "px";
+        }
+
+        window.setInterval('Animation()', 100);
+  
+        function Animation() {
+            getScreenInfo();
+            for (var i = 0; i < numofflw; i++) {
+                var DivFlwStyle = document.getElementById('DivFlw' + i).style;
+
+                //Xử lý trôi xuống
+                var currHeight = getNumber(DivFlwStyle.top); //Lấy vị trí chiều dọc hiện tại
+                if (currHeight >= windowheight + scrollheight - speed * 3) {//Ktra giới hạn
+                    //Khởi tạo vị trí mới
+                    DivFlwStyle.top = getRandom(scrollheight, windowheight + scrollheight) + "px";
+                    DivFlwStyle.left = getRandom(scrollwidth, windowwidth + scrollwidth) + "px";
+                }
+                else
+                    DivFlwStyle.top = (currHeight + speed) + "px"; //Bông hoa trôi xuống
+
+                //Xử lý sang ngang hai bên
+                var currWidth = getNumber(DivFlwStyle.left); //Lấy vị trí chiều ngang hiện tại
+                if ((currWidth >= windowwidth + scrollwidth - speed) || (currWidth < scrollwidth + speed)) {
+                    DivFlwStyle.top = getRandom(scrollheight, windowheight + scrollheight) + "px";
+                    DivFlwStyle.left = getRandom(scrollwidth, windowwidth + scrollwidth) + "px";
+                }
+                else
+                    var newWidth = currWidth + getRandom(-hrzmove, hrzmove);//Lấy ngẫu nhiên vị trí mới
+                DivFlwStyle.left = newWidth + "px"; //gán vị trí mới.
+            }
+        }
+
+        function getScreenInfo() { //Lấy thông tin màn hình.
+            windowwidth = window.innerWidth; //độ rộng cửa sổ
+            windowheight = window.innerHeight; //độ cao cửa sổ
+            scrollheight = window.pageYOffset; //độ cao cuộn trang
+            scrollwidth = window.pageXOffset; //độ rộng cuộn trang
+        }
+        function getNumber(string) { //Bỏ 'px', lấy số.
+            return Number(string.slice(0, string.indexOf("px")));
+        }
+        function getRandom(min, max) { //Lấy random trong khoảng Min - Max
+            return Math.round(Math.random() * (max - min) + min);
+        }
+    </script>
+
+</body>
+</html>

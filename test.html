@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Số Lượng Phần Tử</title>
+    <style>
+        #animation_container {
+            position: relative;
+            width: 360px; /* Độ rộng của animation_container */
+            height: 100px; /* Chiều cao tối thiểu */
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+
+        select {
+            margin-top: 20px;
+        }
+        .pointer {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="numElements">Chọn Số Lượng Phần Tử:</label>
+        <select id="numElements">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <div id="animation_container"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/array.js"></script>
+    <script>
+        // Sử dụng CustomArray
+        $(document).ready(function () {
+            // Khởi tạo CustomArray và chạy mô phỏng Bubble Sort
+            const values = [5, 3, 1, 4, 2];
+            const animationContainer = $('#animation_container');
+            const customArray = new CustomArray(animationContainer, values);
+            bubbleSort(customArray);
+
+        });
+        
+    </script>
+</body>
+</html>

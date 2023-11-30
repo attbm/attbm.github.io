@@ -1,0 +1,137 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "d:\\OneDrive - baosav\\nckh",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2023-11-30 00:43:04",
+            "filesum": 16,
+            "codesum": 951,
+            "commentsum": 185,
+            "blanksum": 139,
+            "statistics": {
+                ".html": {
+                    "code": 518,
+                    "comment": 107,
+                    "blank": 71
+                },
+                ".css": {
+                    "code": 245,
+                    "comment": 26,
+                    "blank": 40
+                },
+                ".js": {
+                    "code": 188,
+                    "comment": 52,
+                    "blank": 28
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 23,
+                    "code": 124,
+                    "comment": 47,
+                    "filename": "about.html"
+                },
+                {
+                    "filename": "img\\bubblesort\\bubblesort.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img\\bubblesort\\c.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img\\bubblesort\\csharp.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img\\bubblesort\\js.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img\\logo.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img\\pointer_i.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img\\pointer_j.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 29,
+                    "code": 200,
+                    "comment": 51,
+                    "filename": "index.html"
+                },
+                {
+                    "blank": 28,
+                    "code": 188,
+                    "comment": 52,
+                    "filename": "js\\array.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 70,
+                    "comment": 9,
+                    "filename": "layout.html"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "style\\array-item.css"
+                },
+                {
+                    "blank": 10,
+                    "code": 96,
+                    "comment": 13,
+                    "filename": "style\\layout.css"
+                },
+                {
+                    "blank": 27,
+                    "code": 129,
+                    "comment": 13,
+                    "filename": "style\\nav-sidebar.css"
+                },
+                {
+                    "blank": 5,
+                    "code": 53,
+                    "comment": 0,
+                    "filename": "test.html"
+                },
+                {
+                    "blank": 7,
+                    "code": 71,
+                    "comment": 0,
+                    "filename": "test2.html"
+                }
+            ]
+        }
+    ]
+}
