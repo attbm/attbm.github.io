@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style/nav-sidebar.css">
     <link rel="stylesheet" href="style/layout.css">
     <style>
-       
+
     </style>
 </head>
 
@@ -25,19 +25,20 @@
         <!----------------------------- Sidebar  ---------------------------->
         <nav id="sidebar">
             <div class="sidebar-header">
-                 <!-- <h3>Bootstrap Sidebar</h3> -->
-                 <img src="img/logo.png" alt="" style="width: 100px;">
+                <!-- <h3>Bootstrap Sidebar</h3> -->
+                <img src="img/logo.png" alt="" style="width: 100px;">
             </div>
 
             <ul class="list-unstyled components">
                 <!-- <p>Dummy Heading</p> -->
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Các thuật toán sắp xếp</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Các
+                        thuật toán sắp xếp</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="index.html">Bubble Sort</a>
                         </li>
-                       
+
                         <li>
                             <a href="insertion.html">Insertion Sort</a>
                         </li>
@@ -118,63 +119,63 @@
 
             <!-- Layout -->
             <div class="container " id="box-container">
-                <div class="row mx-auto flex-md-row-reverse" >
-                 
+                <div class="row mx-auto flex-md-row-reverse">
+
                     <div class="col-md-6 custom-box">
                         <div class="box-content" id="controls-container">
                             <!-- <div class="container" id="controls-container"> -->
-                                  <div class="part part-1" style="position: relative;">
-                                    <div class="controls_row">
-                                        <div class="mr-2">
-                                            <label for="rbt_random">Ngẫu nhiên</label>
-                                            <input type="radio" name="mode" id="rbt_random" >
-                                        </div>
-                                       
-                                        <div>
-                                            <label for="numElements" class="ml-0">Số Lượng:</label>
-                                            <select id="numElements">
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <input type="button" value="GO" class="mybtn" id="btn_go">
-                                        </div>
-                                        
+                            <div class="part part-1" style="position: relative;">
+                                <div class="controls_row">
+                                    <div class="mr-2">
+                                        <label for="rbt_random">Ngẫu nhiên</label>
+                                        <input type="radio" name="mode" id="rbt_random">
                                     </div>
-                                    <div class="controls_row">
-                                        <div class="mr-2">
-                                            <label for="rbt_from_input">Nhập tay:&nbsp;&nbsp;&nbsp; </label>
-                                            <input type="radio"name="mode" id="rbt_from_input">
-                                        </div>
-                                        <div>
-                                            <input type="text" name="" id="array_input" style="width: 230px;">
-                                        </div>
-                                        <div style="margin: auto;">
-                                            
-                                        </div>
+
+                                    <div>
+                                        <label for="numElements" class="ml-0">Số Lượng:</label>
+                                        <select id="numElements">
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
                                     </div>
-                                  </div>
-                                  <div class="part part-2" id="animation_container" style="position: relative;">
-                                    
+                                    <div>
+                                        <input type="button" value="GO" class="mybtn" id="btn_go">
                                     </div>
-                                  <div class="part part-3">
-                                    <div class="flex-center mt-3">
-                                        <button>PLAY</button>
-                                        <button>PAUSE</button>
-                                        <button>NEXT</button>
+
+                                </div>
+                                <div class="controls_row">
+                                    <div class="mr-2">
+                                        <label for="rbt_from_input">Nhập tay:&nbsp;&nbsp;&nbsp; </label>
+                                        <input type="radio" name="mode" id="rbt_from_input">
                                     </div>
-                                  </div>
-                              <!-- </div> -->
+                                    <div>
+                                        <input type="text" name="" id="array_input" style="width: 230px;">
+                                    </div>
+                                    <div style="margin: auto;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part part-2" id="animation_container" style="position: relative;">
+
+                            </div>
+                            <div class="part part-3">
+                                <div class="flex-center mt-3">
+                                    <button id="btnPlay">PLAY</button>
+                                    <button id="btnPause">PAUSE</button>
+                                    <button id="btnNext">NEXT</button>
+                                </div>
+                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
-                   <!-- Box hiển thị mã nguồn -->
+                    <!-- Box hiển thị mã nguồn -->
                     <div class="col-md-6 custom-box">
                         <div class="box-content">
                             <div class="controls_row" style="width: 100%; background-color: #ccc;">
@@ -183,11 +184,11 @@
                                     <label for="rbt_c">C/C++</label>
                                 </div>
                                 <div class="mr-4">
-                                    <input type="radio" name="language" id="rbt_csharp" >
+                                    <input type="radio" name="language" id="rbt_csharp">
                                     <label for="rbt_csharp">C#</label>
                                 </div>
                                 <div class="mr-4">
-                                    <input type="radio" name="language" id="rbt_js" >
+                                    <input type="radio" name="language" id="rbt_js">
                                     <label for="rbt_js">Javascript</label>
                                 </div>
                             </div>
@@ -196,28 +197,39 @@
                     </div>
                     <!-- Hết box hiển thị mã nguồn -->
                 </div>
-                <div class="row mx-auto" >
-                   
+                <div class="row mx-auto">
+
                     <div class="col-md-6 custom-box">
                         <div class="box-content">
                             <img src="img/bubblesort/bubblesort.jpg" alt="" class="diagram">
                         </div>
                     </div>
-                    
+
                     <div class="col-md-6 custom-box">
                         <div class="box-content scrollable-div">
-                            <div><h6>Ý tưởng:</h6></div>
-                            <div>Ý tưởng thuật toán cũng giống như việc xếp hàng trong giờ thể dục. Thầy giáo thể dục muốn xếp các bạn trong lớp thành một hàng theo thứ tự từ thấp đến cao, thầy so sánh chiều cao của 
-                            bạn học sinh đứng cạnh nhau trong hàng, nếu bạn bên phải thấp hơn bạn bên trái thì đổi chỗ 
-                            bạn cho nhau</div>
                             <div>
-                                Với cách sắp xếp không giảm từ trái qua phải, mục đích của chúng ta là đưa dần các số lớn nhất về cuối dãy (ngoài cùng bên phải).
+                                <h6>Ý tưởng:</h6>
+                            </div>
+                            <div>Ý tưởng thuật toán cũng giống như việc xếp hàng trong giờ thể dục. Thầy giáo thể dục
+                                muốn xếp các bạn trong lớp thành một hàng theo thứ tự từ thấp đến cao, thầy so sánh
+                                chiều cao của
+                                bạn học sinh đứng cạnh nhau trong hàng, nếu bạn bên phải thấp hơn bạn bên trái thì đổi
+                                chỗ
+                                bạn cho nhau</div>
+                            <div>
+                                Với cách sắp xếp không giảm từ trái qua phải, mục đích của chúng ta là đưa dần các số
+                                lớn nhất về cuối dãy (ngoài cùng bên phải).
                             </div>
                             <div>
-                                Bắt đầu từ vị trí số 1, xét lần lượt từng cặp phần tử, nếu phần tử bên phải nhỏ hơn phần tử bên trái, ta sẽ thực hiện đổi chỗ phần tử này, nếu không, xét tiếp cặp tiếp theo. Với cách làm như vậy, phần tử nhỏ hơn sẽ "nổi" lên, còn phần tử lớn hơn sẽ "chìm" dần và về bên phải.
+                                Bắt đầu từ vị trí số 1, xét lần lượt từng cặp phần tử, nếu phần tử bên phải nhỏ hơn phần
+                                tử bên trái, ta sẽ thực hiện đổi chỗ phần tử này, nếu không, xét tiếp cặp tiếp theo. Với
+                                cách làm như vậy, phần tử nhỏ hơn sẽ "nổi" lên, còn phần tử lớn hơn sẽ "chìm" dần và về
+                                bên phải.
                             </div>
                             <div>
-                                Khi kết thúc vòng thứ nhất, ta sẽ đưa được phần tử lớn nhất về cuối dãy. Sang vòng thứ hai, ta tiếp tục bắt đầu ở vị trí đầu tiên như vậy và đưa được phần tử lớn thứ hai về vị trí thứ hai ở cuối dãy ...
+                                Khi kết thúc vòng thứ nhất, ta sẽ đưa được phần tử lớn nhất về cuối dãy. Sang vòng thứ
+                                hai, ta tiếp tục bắt đầu ở vị trí đầu tiên như vậy và đưa được phần tử lớn thứ hai về vị
+                                trí thứ hai ở cuối dãy ...
                             </div>
                         </div>
                     </div>
@@ -255,24 +267,98 @@
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
-                  // Khởi tạo CustomArray và chạy mô phỏng Bubble Sort
-                
+                // Khởi tạo CustomArray và chạy mô phỏng Bubble Sort
+
             });
             $('#rbt_c').on('click', function () {
-                $(".img_source").attr("src","img/bubblesort/c.png");
+                $(".img_source").attr("src", "img/bubblesort/c.png");
             });
             $('#rbt_csharp').on('click', function () {
-                $(".img_source").attr("src","img/bubblesort/csharp.png");
+                $(".img_source").attr("src", "img/bubblesort/csharp.png");
             });
             $('#rbt_js').on('click', function () {
-                $(".img_source").attr("src","img/bubblesort/js.png");
+                $(".img_source").attr("src", "img/bubblesort/js.png");
             });
 
 
             const values = [5, 3, 1, 4, 2];
             const animationContainer = $('#animation_container');
             const customArray = new CustomArray(animationContainer, values);
-            bubbleSort(customArray);
+            var isPaused = true;
+            var isRunning = false;
+            var myInterval;
+            // Sử dụng hàm bubbleSortSteps khi nút "Run" được nhấn
+            $('#btnPlay').on('click', function () {
+                console.log('Play clicked');
+                isPaused = false;
+                if(!isRunning)
+                {
+                    bubbleSort(customArray);
+                    isRunning = true;
+                }
+            });
+             $('#btnPause').on('click', function () {
+                console.log('Pause clicked');
+                isPaused = true;
+            });
+
+            async function bubbleSort(customArray) {
+                const n = customArray.values.length;
+                for (let i = 0; i < n - 1; i++) {
+                    // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
+                    const moveIPromise = new Promise(resolve => {
+                        // Thực hiện swapAnimation
+                        customArray.movePointer_i(i).then(() => {
+                            // Gọi resolve khi animation hoàn thành
+                            myInterval = setInterval(function () {
+                                if(!isPaused){
+                                    clearInterval(myInterval);
+                                    console.log('await hoàn thành');
+                                    console.log('Is paused' + isPaused);
+                                    resolve();
+                                }
+                            }, 2000);
+                        });
+                    });
+                    // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
+                    await moveIPromise;
+                    for (let j = 0; j < n - i - 1; j++) {
+                        // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
+                        const moveJPromise = new Promise(resolve => {
+                            // Thực hiện swapAnimation
+                            customArray.movePointer_j(j).then(() => {
+                                // Gọi resolve khi animation hoàn thành
+                                myInterval = setInterval(function () {
+                                    if(!isPaused){
+                                        clearInterval(myInterval);
+                                        console.log('await hoàn thành');
+                                        console.log('Is paused' + isPaused);
+                                        resolve();
+                                    }
+                                }, 2000);
+                            });
+                        });
+                        // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
+                        await moveJPromise;
+
+                        // So sánh giá trị và thực hiện swapAnimation
+                        if (customArray.arrayItems[j].value > customArray.arrayItems[j + 1].value) {
+                            // Sử dụng Promise để chờ đợi animation hoàn thành
+                            const swapPromise = new Promise(resolve => {
+                                // Thực hiện swapAnimation
+                                customArray.swapAnimation(j, j + 1).then(() => {
+                                    // Gọi resolve khi animation hoàn thành
+                                    console.log('await hoàn thành');
+                                    resolve();
+                                });
+                            });
+
+                            // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
+                            await swapPromise;
+                        }
+                    }
+                }
+            }
         });
     </script>
 </body>

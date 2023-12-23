@@ -147,19 +147,56 @@ class CustomArray {
         this.arrayItems[index1] = this.arrayItems[index2];
         this.arrayItems[index2] = temp;
     }
+}//End CustomArray class
+
+async function runAlgorithmStepByStep() {
+    const customArray = new CustomArray($('#animation_container'), [5, 3, 1, 4, 2]);
+    const algorithmSteps = bubbleSortSteps(customArray); // Tạo danh sách các bước thuật toán
+
+    for (const step of algorithmSteps) {
+        await step(); // Chờ cho đến khi bước hiện tại hoàn thành
+    }
+}
+
+async function bubbleSortSteps(customArray, onStepComplete) {
+    const n = customArray.values.length;
+    for (let i = 0; i < n - 1; i++) {
+        await customArray.movePointer_i(i);
+
+        for (let j = 0; j < n - i - 1; j++) {
+            await customArray.movePointer_j(j);
+
+            if (customArray.arrayItems[j].value > customArray.arrayItems[j + 1].value) {
+                await customArray.swapAnimation(j, j + 1);
+            }
+
+            // Check if paused before proceeding to the next iteration
+            if (isPaused) {
+                return;
+            }
+        }
+
+        // Gọi callback để thông báo rằng bước hiện tại đã hoàn thành
+        onStepComplete();
+
+        // Check if paused before proceeding to the next iteration
+        if (isPaused) {
+            return;
+        }
+    }
 }
 
 async function bubbleSort(customArray) {
     const n = customArray.values.length;
     for (let i = 0; i < n - 1; i++) {
-            // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
-            const moveIPromise = new Promise(resolve => {
-            // Thực hiện swapAnimation
-                customArray.movePointer_i(i).then(() => {
-                    // Gọi resolve khi animation hoàn thành
-                    console.log('await hoàn thành');
-                    resolve();
-                });
+        // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
+        const moveIPromise = new Promise(resolve => {
+        // Thực hiện swapAnimation
+            customArray.movePointer_i(i).then(() => {
+                // Gọi resolve khi animation hoàn thành
+                console.log('await hoàn thành');
+                resolve();
+            });
         });
         // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
         await moveIPromise;
@@ -175,7 +212,6 @@ async function bubbleSort(customArray) {
             });
             // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
             await moveJPromise;
-            
 
             // So sánh giá trị và thực hiện swapAnimation
             if (customArray.arrayItems[j].value > customArray.arrayItems[j + 1].value) {
