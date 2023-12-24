@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Index - Bubble Sort</title>
+    <title>Selection Sort - Chọn trực tiếp</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -27,7 +27,7 @@
             <div class="sidebar-header">
                 <!-- <h3>Bootstrap Sidebar</h3> -->
                 <img src="img/logo.png" alt="" style="width: 100px;" class="cursor-poi logo">
-            </div>
+            </div> 
 
             <ul class="list-unstyled components">
                 <!-- <p>Dummy Heading</p> -->
@@ -38,7 +38,6 @@
                         <li>
                             <a href="index.html">Bubble Sort</a>
                         </li>
-
                         <li>
                             <a href="insertion.html">Insertion Sort</a>
                         </li>
@@ -56,24 +55,6 @@
                 <li>
                     <a href="guide.html">Hướng dẫn</a>
                 </li>
-                <!-- <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li> -->
-                <!-- <li>
-                    <a href="#">Portfolio</a>
-                </li> -->
                 <li>
                     <a href="contact.html">Liên hệ</a>
                 </li>
@@ -92,27 +73,12 @@
 
         <!-----------------------Page Content  ------------------------------->
         <div id="content">
-
             <nav class="navbar">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <h6>Thuật sắp xếp toán nổi bọt - Bubble Sort</h6>
-                    <h6></h6>
-                    <!-- <ul class="nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-
-                    </ul> -->
-
+                    <h6>Thuật toán sắp xếp chọn trực tiếp - Selection Sort</h6>
                 </div>
 
             </nav> <!-- End navbarr-->
@@ -190,7 +156,7 @@
                                     <label for="rbt_js">Javascript</label>
                                 </div>
                             </div>
-                            <img src="img/bubblesort/c.png" alt="" class="img_source">
+                            <img src="img/selection/c.png" alt="" class="img_source">
                         </div>
                     </div>
                     <!-- Hết box hiển thị mã nguồn -->
@@ -199,7 +165,7 @@
 
                     <div class="col-md-6 custom-box">
                         <div class="box-content">
-                            <img src="img/bubblesort/bubblesort.jpg" alt="" class="diagram">
+                            <img src="img/selection/selection.jpg" alt="" class="diagram">
                         </div>
                     </div>
 
@@ -208,26 +174,21 @@
                             <div>
                                 <h6>Ý tưởng:</h6>
                             </div>
-                            <div>Ý tưởng thuật toán cũng giống như việc xếp hàng trong giờ thể dục. Thầy giáo thể dục
-                                muốn xếp các bạn trong lớp thành một hàng theo thứ tự từ thấp đến cao, thầy so sánh
-                                chiều cao của
-                                bạn học sinh đứng cạnh nhau trong hàng, nếu bạn bên phải thấp hơn bạn bên trái thì đổi
-                                chỗ
-                                bạn cho nhau</div>
+                            <div>Thuật toán selection sort sắp xếp một mảng bằng cách đi tìm phần tử có giá trị nhỏ nhất(giả sử với sắp xếp mảng tăng dần) 
+                                trong đoạn đoạn chưa được sắp xếp và đổi cho phần tử nhỏ nhất đó với phần tử ở đầu đoạn chưa được sắp xếp(không phải đầu mảng). 
+                                Thuật toán sẽ chia mảng làm 2 mảng con</div>
                             <div>
-                                Với cách sắp xếp không giảm từ trái qua phải, mục đích của chúng ta là đưa dần các số
-                                lớn nhất về cuối dãy (ngoài cùng bên phải).
+                                - Một mảng con đã được sắp xếp
                             </div>
                             <div>
-                                Bắt đầu từ vị trí số 1, xét lần lượt từng cặp phần tử, nếu phần tử bên phải nhỏ hơn phần
-                                tử bên trái, ta sẽ thực hiện đổi chỗ phần tử này, nếu không, xét tiếp cặp tiếp theo. Với
-                                cách làm như vậy, phần tử nhỏ hơn sẽ "nổi" lên, còn phần tử lớn hơn sẽ "chìm" dần và về
-                                bên phải.
+                                - Một mảng con chưa được sắp xếp
                             </div>
                             <div>
-                                Khi kết thúc vòng thứ nhất, ta sẽ đưa được phần tử lớn nhất về cuối dãy. Sang vòng thứ
-                                hai, ta tiếp tục bắt đầu ở vị trí đầu tiên như vậy và đưa được phần tử lớn thứ hai về vị
-                                trí thứ hai ở cuối dãy ...
+                                Tại mỗi bước lặp của thuật toán, phần tử nhỏ nhất ở mảng con chưa được sắp xếp sẽ được di chuyển về đoạn đã sắp xếp.
+                            </div>
+                            <div>
+                                Thuật toán này không phù hợp với các tập dữ liệu lớn vì độ phức tạp trung bình.
+                                Khi bạn sắp xếp với một cơ sở dữ liệu lớn thì quá trình này sẽ chậm và tốn nhiều bộ nhớ máy tính.
                             </div>
                         </div>
                     </div>
@@ -283,13 +244,13 @@
 
             });
             $('#rbt_c').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/c.png");
+                $(".img_source").attr("src", "img/selection/c.png");
             });
             $('#rbt_csharp').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/csharp.png");
+                $(".img_source").attr("src", "img/selection/csharp.png");
             });
             $('#rbt_js').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/js.png");
+                $(".img_source").attr("src", "img/selection/js.png");
             });
             ///////////////// Hết Xử lý giao diện
             //////////////////////Xử lý tạo mảng
@@ -338,7 +299,7 @@
                 $('#array_input').prop('readonly', true);
                 $('#btn_go').text("Reset");
 
-                bubbleSort(customArray);
+                selectionSort(customArray);
                 isRunning = true;
 
             });
@@ -368,7 +329,7 @@
                 isNextPressed = true;
             });
 
-            async function bubbleSort(customArray) {
+            async function selectionSort(customArray) {
                 let selectingIndexs = [];
                 let sortedIndexs = [];
                 const n = customArray.values.length;
@@ -390,7 +351,10 @@
                     });
                     // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                     await moveIPromise;
-                    for (let j = 0; j < n - i - 1; j++) {
+                    selectingIndexs = [i];
+                    customArray.updateColor(selectingIndexs, sortedIndexs);
+                    let min_idx = i;
+                    for (let j = i + 1; j < n; j++) {
                         // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
                         const moveJPromise = new Promise(resolve => {
                             // Thực hiện swapAnimation
@@ -408,34 +372,34 @@
                         });
                         // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                         await moveJPromise;
-                        selectingIndexs = [j, j+1];
-                        customArray.updateColor(selectingIndexs, sortedIndexs);
-                        // So sánh giá trị và thực hiện swapAnimation
-                        if (parseInt(customArray.arrayItems[j].value) > parseInt(customArray.arrayItems[j + 1].value)) {
-                            // Sử dụng Promise để chờ đợi animation hoàn thành
-                            const swapPromise = new Promise(resolve => {
-                                // Thực hiện swapAnimation
-                                customArray.swapAnimation(j, j + 1).then(() => {
-                                    // Gọi resolve khi animation hoàn thành
-                                    myInterval = setInterval(function () {
-                                        if(!isPaused || isNextPressed){
-                                            clearInterval(myInterval);
-                                            isNextPressed = false;
-                                            console.log('await swap hoàn thành');
-                                            resolve();
-                                        }
-                                    }, speed);
-                                });
-                            });
-
-                            // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
-                            await swapPromise;
+                        // So sánh giá trị và thực hiện cập nhật min index
+                        if (parseInt(customArray.arrayItems[min_idx].value) > parseInt(customArray.arrayItems[j].value)) {
+                            min_idx = j;
+                            selectingIndexs = [i, min_idx];
+                            customArray.updateColor(selectingIndexs, sortedIndexs);
                         }
-                    }
-                    sortedIndexs.push(n-i-1);
+                    }//end for j loop
+                    const swapPromise = new Promise(resolve => {
+                        // Thực hiện swapAnimation
+                        customArray.swapAnimation(i, min_idx).then(() => {
+                            // Gọi resolve khi animation hoàn thành
+                            myInterval = setInterval(function () {
+                                if(!isPaused || isNextPressed){
+                                    clearInterval(myInterval);
+                                    isNextPressed = false;
+                                    console.log('await swap hoàn thành');
+                                    resolve();
+                                }
+                            }, speed);
+                        });
+                    });
+                    // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
+                    await swapPromise;
+                    selectingIndexs = [];
+                    sortedIndexs.push(i);
                     customArray.updateColor(selectingIndexs, sortedIndexs);
-                }
-                sortedIndexs.push(0);
+                } //end for i loop
+                sortedIndexs.push(n-1);
                 customArray.updateColor(selectingIndexs, sortedIndexs);
             }
         });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Index - Bubble Sort</title>
+    <title>Insertion Sort - Sắp xếp chèn trực tiếp</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -98,21 +98,7 @@
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <h6>Thuật sắp xếp toán nổi bọt - Bubble Sort</h6>
-                    <h6></h6>
-                    <!-- <ul class="nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-
-                    </ul> -->
-
+                    <h6>Thuật toán sắp xếp chèn trực tiếp - Insertion Sort</h6>
                 </div>
 
             </nav> <!-- End navbarr-->
@@ -190,7 +176,7 @@
                                     <label for="rbt_js">Javascript</label>
                                 </div>
                             </div>
-                            <img src="img/bubblesort/c.png" alt="" class="img_source">
+                            <img src="img/insertion/c.png" alt="" class="img_source">
                         </div>
                     </div>
                     <!-- Hết box hiển thị mã nguồn -->
@@ -199,7 +185,7 @@
 
                     <div class="col-md-6 custom-box">
                         <div class="box-content">
-                            <img src="img/bubblesort/bubblesort.jpg" alt="" class="diagram">
+                            <img src="img/insertion/insertion.jpg" alt="" class="diagram">
                         </div>
                     </div>
 
@@ -208,26 +194,27 @@
                             <div>
                                 <h6>Ý tưởng:</h6>
                             </div>
-                            <div>Ý tưởng thuật toán cũng giống như việc xếp hàng trong giờ thể dục. Thầy giáo thể dục
-                                muốn xếp các bạn trong lớp thành một hàng theo thứ tự từ thấp đến cao, thầy so sánh
-                                chiều cao của
-                                bạn học sinh đứng cạnh nhau trong hàng, nếu bạn bên phải thấp hơn bạn bên trái thì đổi
-                                chỗ
-                                bạn cho nhau</div>
+                            <div>Đây là một thuật toán sắp xếp bắt chước cách sắp xếp quân bài của những người chơi bài. 
+                                Muốn sắp một bộ bài theo trật tự người chơi bài rút lần lượt từ quân thứ 2, so với các quân 
+                                đứng trước nó để chèn vào vị trí thích hợp.</div>
                             <div>
-                                Với cách sắp xếp không giảm từ trái qua phải, mục đích của chúng ta là đưa dần các số
-                                lớn nhất về cuối dãy (ngoài cùng bên phải).
+                                Thuật toán sử dụng vòng lặp để duyệt từ đầu danh sách tới cuối danh sách và chèn phần tử vào 
+                                đúng vị trí để phát triền thành danh sách có thứ tự đúng.
                             </div>
                             <div>
-                                Bắt đầu từ vị trí số 1, xét lần lượt từng cặp phần tử, nếu phần tử bên phải nhỏ hơn phần
-                                tử bên trái, ta sẽ thực hiện đổi chỗ phần tử này, nếu không, xét tiếp cặp tiếp theo. Với
-                                cách làm như vậy, phần tử nhỏ hơn sẽ "nổi" lên, còn phần tử lớn hơn sẽ "chìm" dần và về
-                                bên phải.
+                                - Tại mỗi vị trí i của phần tử đang duyệt, lấy ra phần tử a[i] đó, tìm vị thích hợp trong đoạn 
+                                đã xét a[0] đến a[i-1] sau đó chèn để đoạn danh sách a[0] đến a[i] trở thành danh sách có thứ tự đúng.
                             </div>
                             <div>
-                                Khi kết thúc vòng thứ nhất, ta sẽ đưa được phần tử lớn nhất về cuối dãy. Sang vòng thứ
-                                hai, ta tiếp tục bắt đầu ở vị trí đầu tiên như vậy và đưa được phần tử lớn thứ hai về vị
-                                trí thứ hai ở cuối dãy ...
+                                - Ở lần duyệt thứ i (i bắt đầu từ i, bỏ qua phần tử đầu tiên),  ta có i+1 phần tử ở đầu danh sách là một danh sách có thứ tự.
+                            </div>
+                            <div>
+                                Việc sắp xếp thường được thực hiện tại chỗ, bằng cách lặp lại mảng, tăng danh sách được sắp xếp đằng sau nó. 
+                                Tại mỗi vị trí mảng, nó kiểm tra giá trị ở đó so với giá trị lớn nhất trong danh sách đã sắp xếp 
+                                (tức là phần tử ở bên trái nó, danh sách trước nó đã được kiểm tra).
+                                Nếu lớn hơn, nó đứng tại chỗ và chuyển sang kiểm tra phần tử tiếp theo. 
+                                Nếu nhỏ hơn, nó sẽ tìm vị trí chính xác trong danh sách đã sắp xếp, dịch chuyển tất cả các giá trị lớn hơn để tạo 
+                                khoảng trắng và chèn vào vị trí chính xác đó.
                             </div>
                         </div>
                     </div>
@@ -283,13 +270,13 @@
 
             });
             $('#rbt_c').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/c.png");
+                $(".img_source").attr("src", "img/insertion/c.png");
             });
             $('#rbt_csharp').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/csharp.png");
+                $(".img_source").attr("src", "img/insertion/csharp.png");
             });
             $('#rbt_js').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/js.png");
+                $(".img_source").attr("src", "img/insertion/js.png");
             });
             ///////////////// Hết Xử lý giao diện
             //////////////////////Xử lý tạo mảng
@@ -338,7 +325,7 @@
                 $('#array_input').prop('readonly', true);
                 $('#btn_go').text("Reset");
 
-                bubbleSort(customArray);
+                insertionSort(customArray);
                 isRunning = true;
 
             });
@@ -368,11 +355,11 @@
                 isNextPressed = true;
             });
 
-            async function bubbleSort(customArray) {
+            async function insertionSort(customArray) {
                 let selectingIndexs = [];
                 let sortedIndexs = [];
                 const n = customArray.values.length;
-                for (let i = 0; i < n - 1; i++) {
+                for (let i = 1; i < n ; i++) {
                     // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
                     const moveIPromise = new Promise(resolve => {
                         // Thực hiện swapAnimation
@@ -390,9 +377,10 @@
                     });
                     // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                     await moveIPromise;
-                    for (let j = 0; j < n - i - 1; j++) {
-                        // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
-                        const moveJPromise = new Promise(resolve => {
+                    sortedIndexs = [i];
+                    customArray.updateColor(selectingIndexs, sortedIndexs);
+                    j = i - 1;
+                    const fistMoveJPromise = new Promise(resolve => {
                             // Thực hiện swapAnimation
                             customArray.movePointer_j(j).then(() => {
                                 // Gọi resolve khi animation hoàn thành
@@ -400,43 +388,69 @@
                                     if(!isPaused || isNextPressed){
                                         clearInterval(myInterval);
                                         isNextPressed = false;
-                                        console.log('await move j hoàn thành');
+                                        console.log('await fist move j hoàn thành');
                                         resolve();
                                     }
                                 }, speed);
                             });
-                        });
-                        // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
-                        await moveJPromise;
-                        selectingIndexs = [j, j+1];
-                        customArray.updateColor(selectingIndexs, sortedIndexs);
-                        // So sánh giá trị và thực hiện swapAnimation
-                        if (parseInt(customArray.arrayItems[j].value) > parseInt(customArray.arrayItems[j + 1].value)) {
-                            // Sử dụng Promise để chờ đợi animation hoàn thành
-                            const swapPromise = new Promise(resolve => {
+                    });
+                       
+                    await fistMoveJPromise;
+                    let key = customArray.arrayItems[i].value;
+                    let temp = customArray.arrayItems[i];
+                    let left_must_go = customArray.arrayItems[i].element.position().left;
+                    let top_must_go = customArray.arrayItems[i].element.position().top;
+
+                    sortedIndexs = [i];
+                    selectingIndexs = [j]; 
+                    customArray.updateColor(selectingIndexs, sortedIndexs);
+
+                    let is_go_top = false, left_previous, top_previous;
+                    while (j >= 0 && parseInt(customArray.arrayItems[j].value) > parseInt(key)) {
+                        //Di duyển kêy lên top nếu chưa lên
+                        if(!is_go_top){ //Nếu key chưa lên trên
+                            const moveKeyGoTop = new Promise(resolve => {
                                 // Thực hiện swapAnimation
-                                customArray.swapAnimation(j, j + 1).then(() => {
+                                temp.moveTo(left_must_go, top_must_go - customArray.itemSize).then(() => {
                                     // Gọi resolve khi animation hoàn thành
                                     myInterval = setInterval(function () {
                                         if(!isPaused || isNextPressed){
                                             clearInterval(myInterval);
                                             isNextPressed = false;
-                                            console.log('await swap hoàn thành');
+                                            console.log('await move top hoàn thành');
                                             resolve();
                                         }
                                     }, speed);
                                 });
                             });
-
-                            // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
-                            await swapPromise;
+            
+                            await moveKeyGoTop;
+                            is_go_top = true; //Bật cờ báo lên rồi
                         }
-                    }
-                    sortedIndexs.push(n-i-1);
+                        selectingIndexs = [j]; 
+                        customArray.updateColor(selectingIndexs, sortedIndexs);
+                        //Di chuyển vị trí j lên vị trí j+1
+                        left_previous = customArray.arrayItems[j].element.position().left;
+                        top_previous = customArray.arrayItems[j].element.position().top;
+                        await customArray.arrayItems[j].moveTo(left_must_go, top_must_go);
+                        left_must_go = left_previous;
+                        top_must_go = top_previous;
+                        //Cập nhật dữ liệu
+                        customArray.arrayItems[j+1] = customArray.arrayItems[j];
+                        j--;
+                        await customArray.movePointer_j(j);
+                    } //End while loop
+                    //sortedIndexs.push(n-i-1);
+                    //customArray.updateColor(selectingIndexs, sortedIndexs);
+                    await temp.moveTo(left_must_go, top_must_go - customArray.itemSize);
+                    await temp.moveTo(left_must_go, top_must_go);
+                    customArray.arrayItems[j+1] = temp;
+                    
+                    sortedIndexs = [];
+                    selectingIndexs = []; 
                     customArray.updateColor(selectingIndexs, sortedIndexs);
-                }
-                sortedIndexs.push(0);
-                customArray.updateColor(selectingIndexs, sortedIndexs);
+                } //End for loop
+                
             }
         });
     </script>

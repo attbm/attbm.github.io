@@ -113,6 +113,14 @@ input[type="text"]
   margin-left: 40px;
 }
 
+.cursor-poi {
+  cursor: pointer;
+}
+.custom-email-link {
+  color: #007bff; /* Bootstrap default link color */
+  text-decoration: underline; /* Underline for traditional link appearance */
+}
+
 /* .mt-1{
 
 } */

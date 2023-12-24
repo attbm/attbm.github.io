@@ -4,7 +4,7 @@ class ArrayItem {
         this.size = size;
         this.backgroundColor = backgroundColor;
         this.value = value;
-
+        this.speed = 700; //milliseconds
         this.element = $('<div>', {
             class: 'array-item',
             text: value
@@ -26,8 +26,13 @@ class ArrayItem {
 
     moveTo(left, top) {
         return new Promise((resolve) => {
-            this.element.animate({ left: left + 'px', top: top + 'px' }, 1000, resolve);
+            this.element.animate({ left: left + 'px', top: top + 'px' }, this.speed, resolve);
         });
+    }
+    changeColor(newColor) {
+        // Change the background color of the ArrayItem
+        this.backgroundColor = newColor;
+        this.element.css('backgroundColor', newColor);
     }
 }
 
@@ -37,10 +42,13 @@ class CustomArray {
         this.values = values;
         this.itemSize = 20;
         this.spacing = 0;
-
-        this.arrayItems = [];
+        this.speed = 1000; //milliseconds
+        this.arrayItems = []; //mảng các ArrayItem
         this.indexLabels = []; // Mảng quản lý indexLabel
         this.containerWidth = 0;
+        this.backgroundColor = '#3498db';
+        this.selectingColor = '#0d41d1';
+        this.sortedColor = '#743bf7';
 
         // Thêm pointer_i và pointer_j là hình ảnh
         this.pointer_i = $('<img>', {
@@ -105,7 +113,7 @@ class CustomArray {
             const top = arrayItem.element.position().top + this.itemSize + 10;;
             const left = arrayItem.element.position().left;
             return new Promise(resolve => {
-                this.pointer_i.animate({ left: left + 'px', top: top + 'px' }, 1000, resolve);
+                this.pointer_i.animate({ left: left + 'px', top: top + 'px' }, this.speed, resolve);
             });
         }
     }
@@ -118,8 +126,20 @@ class CustomArray {
             const left = arrayItem.element.position().left;
             //this.moveTo(top,arrayItem.element.position().left);
             return new Promise((resolve) => {
-                this.pointer_j.animate({ left: left + 'px', top: top + 'px' }, 1000, resolve);
+                this.pointer_j.animate({ left: left + 'px', top: top + 'px' }, this.speed, resolve);
             });
+        }
+    }
+
+    updateColor(selectingIndexs, sortedIndexs){
+        for (let i = 0; i < this.arrayItems.length; i++) {
+            this.arrayItems[i].changeColor(this.backgroundColor);
+        }
+        for (let i = 0; i < selectingIndexs.length; i++) {
+            this.arrayItems[selectingIndexs[i]].changeColor(this.selectingColor);
+        }
+        for (let i = 0; i < sortedIndexs.length; i++) {
+            this.arrayItems[sortedIndexs[i]].changeColor(this.sortedColor);
         }
     }
 
@@ -146,6 +166,37 @@ class CustomArray {
         let temp = this.arrayItems[index1];
         this.arrayItems[index1] = this.arrayItems[index2];
         this.arrayItems[index2] = temp;
+    }
+    //Sắp xếp chèn ArrayItem tại i_source vào i_target. dịch các vị trí.
+    async insertionSortAnimation(i_source, i_target) {
+        //Thực hiện các hoạt cảnh
+
+        const aISource = this.arrayItems[i_source];
+        
+        const left_source = aISource.element.position().left;
+        const top_source = aISource.element.position().top;
+
+        await aISource.moveTo(left_source, top_source - this.itemSize); // dịch source lên
+        let left_must_go = left_source, top_must_go = top_source, left_previous, top_previous;
+        for (let i = i_begin - 1; i >= i_target; i--) {
+            //Tiến từng phần tử đến vị trí bị bỏ trống
+            left_previous = this.arrayItems[i].element.position().left;
+            top_previous = this.arrayItems[i].element.position().top;
+            await this.arrayItems[i].moveTo(left_must_go, top_must_go);
+            left_must_go = left_previous;
+            top_must_go = top_previous;
+        }
+        await aISource.moveTo(left_must_go, top_source - this.itemSize); // dịch source sang trái
+        
+        await aISource.moveTo(left_must_go, top_must_go); // xuống
+        
+        
+        //Cập nhật dữ liệu
+        let temp = this.arrayItems[i_source];
+        for (let i = i_begin - 1; i >= i_target; i--) {
+            this.arrayItems[i + 1] = this.arrayItems[i];
+        }
+        this.arrayItems[i_target] = temp;
     }
 }//End CustomArray class
 

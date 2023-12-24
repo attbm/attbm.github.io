@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Index - Bubble Sort</title>
+    <title>Interchange Sort - Đổi chỗ trực tiếp</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -27,7 +27,7 @@
             <div class="sidebar-header">
                 <!-- <h3>Bootstrap Sidebar</h3> -->
                 <img src="img/logo.png" alt="" style="width: 100px;" class="cursor-poi logo">
-            </div>
+            </div> 
 
             <ul class="list-unstyled components">
                 <!-- <p>Dummy Heading</p> -->
@@ -56,24 +56,6 @@
                 <li>
                     <a href="guide.html">Hướng dẫn</a>
                 </li>
-                <!-- <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li> -->
-                <!-- <li>
-                    <a href="#">Portfolio</a>
-                </li> -->
                 <li>
                     <a href="contact.html">Liên hệ</a>
                 </li>
@@ -92,27 +74,12 @@
 
         <!-----------------------Page Content  ------------------------------->
         <div id="content">
-
             <nav class="navbar">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <h6>Thuật sắp xếp toán nổi bọt - Bubble Sort</h6>
-                    <h6></h6>
-                    <!-- <ul class="nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-
-                    </ul> -->
-
+                    <h6>Thuật toán sắp xếp đổi chỗ trực tiếp - Interchange Sort</h6>
                 </div>
 
             </nav> <!-- End navbarr-->
@@ -190,7 +157,7 @@
                                     <label for="rbt_js">Javascript</label>
                                 </div>
                             </div>
-                            <img src="img/bubblesort/c.png" alt="" class="img_source">
+                            <img src="img/interchange/c.png" alt="" class="img_source">
                         </div>
                     </div>
                     <!-- Hết box hiển thị mã nguồn -->
@@ -199,7 +166,7 @@
 
                     <div class="col-md-6 custom-box">
                         <div class="box-content">
-                            <img src="img/bubblesort/bubblesort.jpg" alt="" class="diagram">
+                            <img src="img/interchange/interchange.png" alt="" class="diagram">
                         </div>
                     </div>
 
@@ -208,26 +175,13 @@
                             <div>
                                 <h6>Ý tưởng:</h6>
                             </div>
-                            <div>Ý tưởng thuật toán cũng giống như việc xếp hàng trong giờ thể dục. Thầy giáo thể dục
-                                muốn xếp các bạn trong lớp thành một hàng theo thứ tự từ thấp đến cao, thầy so sánh
-                                chiều cao của
-                                bạn học sinh đứng cạnh nhau trong hàng, nếu bạn bên phải thấp hơn bạn bên trái thì đổi
-                                chỗ
-                                bạn cho nhau</div>
+                            <div>Thuật toán đổi chỗ trực tiếp (interchange sort) là một thuật toán sắp xếp đơn giản và hiệu quả. 
+                                Nó hoạt động bằng cách duyệt qua mảng từ đầu đến cuối, và mỗi lần duyệt, nó tìm hai phần tử liền kề và hoán đổi chúng nếu chúng ở vị trí không đúng. Quá trình này được lặp lại cho đến khi mảng được sắp xếp.</div>
                             <div>
-                                Với cách sắp xếp không giảm từ trái qua phải, mục đích của chúng ta là đưa dần các số
-                                lớn nhất về cuối dãy (ngoài cùng bên phải).
+                                Xuất phát từ đầu dãy, tìm tất cả nghịch thế chứa phần tử này, triệt tiêu chúng bằng cách đổi chỗ phần tử này với phần tử tương ứng trong cặp nghịch thế
                             </div>
                             <div>
-                                Bắt đầu từ vị trí số 1, xét lần lượt từng cặp phần tử, nếu phần tử bên phải nhỏ hơn phần
-                                tử bên trái, ta sẽ thực hiện đổi chỗ phần tử này, nếu không, xét tiếp cặp tiếp theo. Với
-                                cách làm như vậy, phần tử nhỏ hơn sẽ "nổi" lên, còn phần tử lớn hơn sẽ "chìm" dần và về
-                                bên phải.
-                            </div>
-                            <div>
-                                Khi kết thúc vòng thứ nhất, ta sẽ đưa được phần tử lớn nhất về cuối dãy. Sang vòng thứ
-                                hai, ta tiếp tục bắt đầu ở vị trí đầu tiên như vậy và đưa được phần tử lớn thứ hai về vị
-                                trí thứ hai ở cuối dãy ...
+                                Lặp lại xử lý trên với các phần tử tiếp theo trong dãy.
                             </div>
                         </div>
                     </div>
@@ -283,13 +237,13 @@
 
             });
             $('#rbt_c').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/c.png");
+                $(".img_source").attr("src", "img/interchange/c.png");
             });
             $('#rbt_csharp').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/csharp.png");
+                $(".img_source").attr("src", "img/interchange/csharp.png");
             });
             $('#rbt_js').on('click', function () {
-                $(".img_source").attr("src", "img/bubblesort/js.png");
+                $(".img_source").attr("src", "img/interchange/js.png");
             });
             ///////////////// Hết Xử lý giao diện
             //////////////////////Xử lý tạo mảng
@@ -338,7 +292,7 @@
                 $('#array_input').prop('readonly', true);
                 $('#btn_go').text("Reset");
 
-                bubbleSort(customArray);
+                interchangeSort(customArray);
                 isRunning = true;
 
             });
@@ -368,7 +322,7 @@
                 isNextPressed = true;
             });
 
-            async function bubbleSort(customArray) {
+            async function interchangeSort(customArray) {
                 let selectingIndexs = [];
                 let sortedIndexs = [];
                 const n = customArray.values.length;
@@ -390,7 +344,7 @@
                     });
                     // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                     await moveIPromise;
-                    for (let j = 0; j < n - i - 1; j++) {
+                    for (let j = i + 1; j < n; j++) {
                         // Di chuyển pointer_i và pointer_j tới vị trí hiện tại của i và j
                         const moveJPromise = new Promise(resolve => {
                             // Thực hiện swapAnimation
@@ -408,14 +362,14 @@
                         });
                         // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                         await moveJPromise;
-                        selectingIndexs = [j, j+1];
+                        selectingIndexs = [i, j];
                         customArray.updateColor(selectingIndexs, sortedIndexs);
                         // So sánh giá trị và thực hiện swapAnimation
-                        if (parseInt(customArray.arrayItems[j].value) > parseInt(customArray.arrayItems[j + 1].value)) {
+                        if (parseInt(customArray.arrayItems[i].value) > parseInt(customArray.arrayItems[j].value)) {
                             // Sử dụng Promise để chờ đợi animation hoàn thành
                             const swapPromise = new Promise(resolve => {
                                 // Thực hiện swapAnimation
-                                customArray.swapAnimation(j, j + 1).then(() => {
+                                customArray.swapAnimation(i, j).then(() => {
                                     // Gọi resolve khi animation hoàn thành
                                     myInterval = setInterval(function () {
                                         if(!isPaused || isNextPressed){
@@ -431,11 +385,12 @@
                             // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                             await swapPromise;
                         }
-                    }
-                    sortedIndexs.push(n-i-1);
+                    }//end for j loop
+                    selectingIndexs = [];
+                    sortedIndexs.push(i);
                     customArray.updateColor(selectingIndexs, sortedIndexs);
-                }
-                sortedIndexs.push(0);
+                } //end for i loop
+                sortedIndexs.push(n-1);
                 customArray.updateColor(selectingIndexs, sortedIndexs);
             }
         });

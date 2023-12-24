@@ -33,3 +33,57 @@ style\nav-sidebar.css, code is 129, comment is 13, blank is 27.
 test.html, code is 53, comment is 0, blank is 5.
 test2.html, code is 71, comment is 0, blank is 7.
 ===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2023-12-25 00:54:44
+count workspace : d:\OneDrive - baosav\nckh
+total files : 35
+total code lines : 2019
+total comment lines : 327
+total blank lines : 259
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .css|            244|             27|             40|     12|
+   |          .html|           1488|            214|            175|     74|
+   |            .js|            287|             86|             44|     14|
+   -------------------------------------------------------------------------
+about.html, code is 124, comment is 47, blank is 23.
+guide.html, code is 124, comment is 47, blank is 23.
+img\bubblesort\bubblesort.jpg, it is a binary file.
+img\bubblesort\c.png, it is a binary file.
+img\bubblesort\csharp.png, it is a binary file.
+img\bubblesort\js.png, it is a binary file.
+img\guide\content.png, it is a binary file.
+img\guide\menu.png, it is a binary file.
+img\insertion\c.png, it is a binary file.
+img\insertion\csharp.png, it is a binary file.
+img\insertion\insertion.jpg, it is a binary file.
+img\insertion\js.png, it is a binary file.
+img\interchange\c.png, it is a binary file.
+img\interchange\csharp.png, it is a binary file.
+img\interchange\interchange.png, it is a binary file.
+img\interchange\js.png, it is a binary file.
+img\logo.png, it is a binary file.
+img\pointer_i.png, it is a binary file.
+img\pointer_j.png, it is a binary file.
+img\selection\c.png, it is a binary file.
+img\selection\csharp.png, it is a binary file.
+img\selection\js.png, it is a binary file.
+img\selection\selection.jpg, it is a binary file.
+index.html, code is 352, comment is 51, blank is 36.
+insertion.html, code is 374, comment is 39, blank is 40.
+interchange.html, code is 338, comment is 21, blank is 34.
+js\array.js, code is 255, comment is 69, blank is 40.
+js\demo.js, code is 18, comment is 6, blank is 2.
+js\main.js, code is 14, comment is 11, blank is 2.
+layout.html, code is 70, comment is 9, blank is 7.
+style\array-item.css, code is 20, comment is 0, blank is 3.
+style\layout.css, code is 95, comment is 14, blank is 10.
+style\nav-sidebar.css, code is 129, comment is 13, blank is 27.
+test.html, code is 35, comment is 0, blank is 5.
+test2.html, code is 71, comment is 0, blank is 7.
+===============================================================================
