@@ -153,7 +153,7 @@
                                         <input type="radio" name="mode" id="rbt_from_input">
                                     </div>
                                     <div>
-                                        <input type="text" name="" id="array_input" style="width: 230px;">
+                                        <input type="text" name="" id="array_input" style="width: 230px;" readonly>
                                     </div>
                                     <div style="margin: auto;">
 
@@ -291,6 +291,14 @@
             $('#rbt_js').on('click', function () {
                 $(".img_source").attr("src", "img/bubblesort/js.png");
             });
+            $('#rbt_random').click(function (e) { 
+                $('#numElements').prop('disabled', false);
+                $('#array_input').prop('readonly', true);
+            });
+            $('#rbt_from_input').click(function (e) { 
+                $('#numElements').prop('disabled', true);
+                $('#array_input').prop('readonly', false);
+            });         
             ///////////////// Hết Xử lý giao diện
             //////////////////////Xử lý tạo mảng
             /**
@@ -327,6 +335,16 @@
                     values = createArrayFromString(old_str);
 
                     so_luong = values.length;
+                    if(so_luong < 4)
+                    {
+                        alert('Số phần tử quá ít'); return;
+                    }
+                    for (let index = 0; index < values.length; index++) {
+                        if(parseInt(values[index]) > 99){
+                            alert('Số không được lớn hơn 99'); return;
+                        }
+                        
+                    }
                 }
                 animationContainer = $('#animation_container');
                 customArray = new CustomArray(animationContainer, values);
