@@ -40,15 +40,15 @@ class CustomArray {
     constructor(animationContainer, values) {
         this.animationContainer = animationContainer;
         this.values = values;
-        this.itemSize = 20;
+        this.itemSize = 30;
         this.spacing = 0;
         this.speed = 1000; //milliseconds
         this.arrayItems = []; //mảng các ArrayItem
         this.indexLabels = []; // Mảng quản lý indexLabel
         this.containerWidth = 0;
-        this.backgroundColor = '#3498db';
-        this.selectingColor = '#0d41d1';
-        this.sortedColor = '#743bf7';
+        this.backgroundColor = '#75b8ff';
+        this.selectingColor = '#f7f323';
+        this.sortedColor = '#3ce84b';
 
         // Thêm pointer_i và pointer_j là hình ảnh
         this.pointer_i = $('<img>', {
@@ -79,7 +79,7 @@ class CustomArray {
             const left = this.spacing * (i + 1) + i * this.itemSize;
             const top = (this.animationContainer.height() - this.itemSize) / 2;
             const value = this.values[i];
-            const backgroundColor = '#3498db';
+            const backgroundColor = this.backgroundColor;
 
             const arrayItem = new ArrayItem(this.animationContainer, left, top, value.toString(), backgroundColor, this.itemSize);
             this.arrayItems.push(arrayItem);
@@ -329,18 +329,3 @@ async function interchangeSort(customArray) {
         }
     }
 }
-    async function testAnimation(customArray) {
-        const n = customArray.values.length;
-        for (let i = 0; i < n; i++) {
-            const swapPromise = new Promise(resolve => {
-                // Thực hiện swapAnimation
-                customArray.movePointer_i(i).then(() => {
-                    // Gọi resolve khi animation hoàn thành
-                    console.log('await hoàn thành');
-                    resolve();
-                });
-            });
-            // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
-            await swapPromise;
-        }
-    }

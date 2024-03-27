@@ -51,6 +51,9 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="exercise.html">Trắc nghiệm</a>
+                </li>
+                <li>
                     <a href="about.html">Giới thiệu</a>
                 </li>
                 <li>
@@ -221,6 +224,7 @@
                     </div>
                 </div>
             </div>
+            <hr class="separator">
             <footer class="text-center">
                 <div>Sản phẩm của tập thể giảng viên khoa CNTT - KẾ TOÁN</div>
                 <div>Trường CAO ĐẲNG ĐẮK LẮK</div>
@@ -396,7 +400,7 @@
                     });
                     // Chờ đợi swapPromise hoàn thành trước khi tiếp tục
                     await moveIPromise;
-                    sortedIndexs = [i];
+                    //sortedIndexs = [];
                     customArray.updateColor(selectingIndexs, sortedIndexs);
                     j = i - 1;
                     const fistMoveJPromise = new Promise(resolve => {
@@ -420,8 +424,8 @@
                     let left_must_go = customArray.arrayItems[i].element.position().left;
                     let top_must_go = customArray.arrayItems[i].element.position().top;
 
-                    sortedIndexs = [i];
-                    selectingIndexs = [j]; 
+                    //sortedIndexs = [i];
+                    selectingIndexs = [i,j]; 
                     customArray.updateColor(selectingIndexs, sortedIndexs);
 
                     let is_go_top = false, left_previous, top_previous;
@@ -446,7 +450,7 @@
                             await moveKeyGoTop;
                             is_go_top = true; //Bật cờ báo lên rồi
                         }
-                        selectingIndexs = [j]; 
+                        selectingIndexs = [i,j]; 
                         customArray.updateColor(selectingIndexs, sortedIndexs);
                         //Di chuyển vị trí j lên vị trí j+1
                         left_previous = customArray.arrayItems[j].element.position().left;
@@ -465,11 +469,15 @@
                     await temp.moveTo(left_must_go, top_must_go);
                     customArray.arrayItems[j+1] = temp;
                     
-                    sortedIndexs = [];
+                    //sortedIndexs.push(i);
                     selectingIndexs = []; 
                     customArray.updateColor(selectingIndexs, sortedIndexs);
                 } //End for loop
-                
+                selectingIndexs = []; 
+                for (let i = 0; i < n ; i++){
+                    sortedIndexs.push(i); 
+                }
+                customArray.updateColor(selectingIndexs, sortedIndexs);
             }
         });
     </script>

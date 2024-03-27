@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Liên hệ</title>
+    <title>Trắc nghiệm</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -15,7 +15,13 @@
     <link rel="stylesheet" href="style/nav-sidebar.css">
     <link rel="stylesheet" href="style/layout.css">
     <style>
-       
+        li.quiz{
+            padding: 10px;
+            list-style-type: none;
+        }
+       .radio{
+            margin-right: 10px;
+       }
     </style>
 </head>
 
@@ -58,24 +64,6 @@
                 <li>
                     <a href="guide.html">Hướng dẫn</a>
                 </li>
-                <!-- <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li> -->
-                <!-- <li>
-                    <a href="#">Portfolio</a>
-                </li> -->
                 <li>
                     <a href="contact.html">Liên hệ</a>
                 </li>
@@ -85,9 +73,6 @@
                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
                 </li>
-                <!-- <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-                </li> -->
             </ul>
         </nav>
         <!----------------------------- END Sidebar  ---------------------------->
@@ -100,51 +85,24 @@
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <h6>TRANG LIÊN HỆ</h6>
+                    <h6>Câu hỏi trắc nghiệm</h6>
                     <h6></h6>
-                    <!-- <ul class="nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
-                        </li>
-
-                    </ul> -->
-
                 </div>
-
             </nav> <!-- End navbarr-->
-
             <!-- Layout -->
-            <div class="container " id="box-container" style="min-height: 80vh;">
-                <h3>Thông tin liên hệ</h3>
-                <br>
-                <p>
-                    
-                </p>
-                <p>
-                    Chào mừng bạn đến với trang liên hệ của chúng tôi. 
-                    Chúng tôi luôn nỗ lực mang đến cho các bạn sản phẩm tốt nhất. 
-                    Tuy nhiên, trong quá trình sử dụng, nếu bạn gặp bất kỳ vấn đề gì, 
-                    hoặc là các ý kiến chỉnh sửa, đề nghị bổ sung tính năng, 
-                    vui lòng liên hệ với chúng tôi để được hỗ trợ..
-                </p>
-                <p>
+            <div class="container " id="box-container" style="min-height: 77vh;">
+                <!-- <h5>Trắc nghiệm</h5> -->
+                <div id="quiz">
+                    <h6 id="question">Câu hỏi sẽ xuất hiện ở đây</h6>
+                    <ul id="options">
+                        <!-- Các câu trả lời sẽ được thêm vào đây -->
+                    </ul>
+                    <button id="submit">Đồng ý</button>
+                </div>
                 
-                    Mọi ý kiến góp ý của bạn về sản phẩm, ý kiến chỉnh sửa, 
-                    đề nghị bổ sung tính năng, hoặc bất kỳ vấn đề gì liên quan đến các 
-                    công cụ được cung cấp đều được chúng tôi trân trọng. 
-                    Hãy gửi ý kiến của bạn về địa chỉ email 
-                    <a href="mailto:tuandaklak@gmail.com" class="custom-email-link">tuandaklak@gmail.com</a>.
-                </p>
-                <p>
-                    Xin trân trọng cảm ơn!
-                </p>
-                
+                <div id="result">
+                    <!-- Kết quả của trắc nghiệm sẽ xuất hiện ở đây -->
+                </div>
             </div>
             <hr class="separator">
             <footer class="text-center">
@@ -175,29 +133,14 @@
         crossorigin="anonymous"></script>
     <script src="js/array.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/exercise.js"></script>
 
     <script>
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
-                  // Khởi tạo CustomArray và chạy mô phỏng Bubble Sort
-                
             });
-            $('#rbt_c').on('click', function () {
-                $(".img_source").attr("src","img/bubblesort/c.png");
-            });
-            $('#rbt_csharp').on('click', function () {
-                $(".img_source").attr("src","img/bubblesort/csharp.png");
-            });
-            $('#rbt_js').on('click', function () {
-                $(".img_source").attr("src","img/bubblesort/js.png");
-            });
-
-
-            const values = [5, 3, 1, 4, 2];
-            const animationContainer = $('#animation_container');
-            const customArray = new CustomArray(animationContainer, values);
-            bubbleSort(customArray);
+          
         });
     </script>
 </body>

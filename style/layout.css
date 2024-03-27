@@ -121,6 +121,13 @@ input[type="text"]
   text-decoration: underline; /* Underline for traditional link appearance */
 }
 
+.separator {
+  border: none;
+  width: 70vw;
+  height: 2px;
+  background-color: #49e9dc;
+}
+
 /* .mt-1{
 
 } */

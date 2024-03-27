@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $('.logo').click(function (e) { 
         e.preventDefault();
-        window.location.href = 'http://www.cdndaklak.edu.vn/'
+        //window.location.href = 'https://www.facebook.com/truongcaodangcntn/';
+        window.open("https://www.facebook.com/truongcaodangcntn", "_blank");
     });
 });
 /**
